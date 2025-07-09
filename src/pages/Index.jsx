@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import Services from '../components/Services';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
@@ -23,6 +24,7 @@ const Index = () => {
   const navItems = [
     { name: 'Home', id: 'home' },
     { name: 'About', id: 'about' },
+    { name: 'Services', id: 'services' },
     { name: 'Skills', id: 'skills' },
     { name: 'Projects', id: 'projects' },
     { name: 'Contact', id: 'contact' },
@@ -117,6 +119,7 @@ const Index = () => {
       <main className="pt-16">
         <Hero darkMode={darkMode} />
         <About darkMode={darkMode} />
+        <Services darkMode={darkMode} />
         <Skills darkMode={darkMode} />
         <Projects darkMode={darkMode} />
         <Contact darkMode={darkMode} />

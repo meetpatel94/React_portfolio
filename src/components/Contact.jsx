@@ -300,7 +300,7 @@ const Contact = ({ darkMode }) => {
                 ) : (
                   <>
                     <Send size={20} />
-                    <span>Send Message</span>
+                    <span>Send Message & Save to Sheet</span>
                   </>
                 )}
               </button>

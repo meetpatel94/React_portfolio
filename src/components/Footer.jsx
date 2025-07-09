@@ -34,7 +34,7 @@ const Footer = ({ darkMode }) => {
               <span>by Meet Patel</span>
             </p>
             <p className="text-gray-500 text-sm mt-2">
-              © 2024 All rights reserved.
+              © 2025 All rights reserved.
             </p>
           </div>
         </div>

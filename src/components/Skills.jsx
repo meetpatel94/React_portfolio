@@ -51,12 +51,12 @@ const Skills = ({ darkMode }) => {
     },
     {
       icon: Database,
-      title: 'Database',
+      title: 'Database & Others',
       skills: [
         { name: 'MySQL', level: 80, color: 'from-blue-500 to-indigo-600' },
         { name: 'MongoDB', level: 70, color: 'from-green-500 to-teal-600' },
-        // { name: 'Responsive Design', level: 85, color: 'from-purple-500 to-pink-600' },
-        // { name: 'Teamwork', level: 90, color: 'from-indigo-500 to-purple-600' }
+        { name: 'Responsive Design', level: 85, color: 'from-purple-500 to-pink-600' },
+        { name: 'Teamwork', level: 90, color: 'from-indigo-500 to-purple-600' }
       ],
       bgColor: darkMode ? 'bg-gradient-to-br from-gray-700 to-gray-600' : 'bg-gradient-to-br from-purple-50 to-pink-50',
       iconColor: 'text-purple-600'

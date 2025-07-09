@@ -47,7 +47,7 @@ const Hero = ({ darkMode }) => {
           } transition-all duration-1000 delay-200 transform ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
-            MERN Stack Developer & Full Stack Developer
+            Information Technology Engineer & Full Stack Developer
           </p>
           
           <p className={`text-lg mb-12 max-w-2xl mx-auto ${
