@@ -119,7 +119,7 @@ const Contact = ({ darkMode }) => {
     { 
       icon: Instagram, 
       name: 'Instagram', 
-      url: 'https://instagram.com/meetpatel',
+      url: 'https://instagram.com/meet_patel_96645',
       hoverColor: 'hover:bg-gradient-to-br hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 hover:text-white',
       shadowColor: 'hover:shadow-pink-500/25'
     },
@@ -329,7 +329,7 @@ const Contact = ({ darkMode }) => {
                 ) : (
                   <>
                     <Send size={20} />
-                    <span>Send Message & Save to Sheet</span>
+                    <span>Send Message</span>
                   </>
                 )}
               </button>

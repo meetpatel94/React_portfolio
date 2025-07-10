@@ -82,7 +82,7 @@ const About = ({ darkMode }) => {
               <p className={`text-lg leading-relaxed ${
                 darkMode ? 'text-gray-300' : 'text-gray-600'
               }`}>
-                Currently pursuing B.E in Information Technology from Gujarat Technological University (GTU). 
+                Passed out B.E in Information Technology from Gujarat Technological University (GTU). 
                 I have hands-on experience with modern web technologies including React.js, Tailwind CSS, 
                 JavaScript, and various development tools. I'm passionate about creating responsive, 
                 user-friendly web applications and contributing to dynamic work environments.

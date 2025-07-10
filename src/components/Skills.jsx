@@ -28,8 +28,7 @@ const Skills = ({ darkMode }) => {
       icon: Code,
       title: 'Frontend',
       skills: [
-        { name: 'HTML5', level: 95, color: 'from-orange-400 to-red-500' },
-        { name: 'CSS3', level: 90, color: 'from-blue-400 to-cyan-500' },
+        { name: 'HTML5/CSS#', level: 95, color: 'from-orange-400 to-red-500' },
         { name: 'JavaScript', level: 85, color: 'from-yellow-400 to-orange-500' },
         { name: 'React.js', level: 80, color: 'from-blue-400 to-cyan-600' },
         { name: 'Tailwind CSS', level: 85, color: 'from-teal-400 to-blue-500' }
@@ -39,24 +38,26 @@ const Skills = ({ darkMode }) => {
     },
     {
       icon: Server,
-      title: 'Backend & Tools',
+      title: 'Backend & Databases',
       skills: [
-        { name: 'Java', level: 75, color: 'from-red-400 to-pink-500' },
-        { name: 'Python', level: 70, color: 'from-green-400 to-blue-500' },
-        { name: 'GitHub', level: 80, color: 'from-gray-600 to-gray-800' },
-        { name: 'VS Code', level: 90, color: 'from-blue-500 to-purple-600' }
+        { name: 'Java Spring Boot', level: 95, color: 'from-red-400 to-pink-500' },
+        { name: 'Node.js', level: 80, color: 'from-gray-600 to-gray-800' },
+        { name: 'Express.js', level: 90, color: 'from-blue-500 to-purple-600' },
+        { name: 'MongoDB', level: 88, color: 'from-green-400 to-blue-500' },
+        { name: 'MYSQL', level: 90, color: 'from-blue-400 to-cyan-500' }
       ],
       bgColor: darkMode ? 'bg-gradient-to-br from-gray-700 to-gray-600' : 'bg-gradient-to-br from-green-50 to-emerald-50',
       iconColor: 'text-green-600'
     },
     {
       icon: Database,
-      title: 'Database & Others',
+      title: 'Tools & Frameworks',
       skills: [
-        { name: 'MySQL', level: 80, color: 'from-blue-500 to-indigo-600' },
-        { name: 'MongoDB', level: 70, color: 'from-green-500 to-teal-600' },
-        { name: 'Responsive Design', level: 85, color: 'from-purple-500 to-pink-600' },
-        { name: 'Teamwork', level: 90, color: 'from-indigo-500 to-purple-600' }
+        { name: 'Git/Github', level: 80, color: 'from-blue-500 to-indigo-600' },
+        { name: 'VS Code', level: 70, color: 'from-green-500 to-teal-600' },
+        { name: 'Spring Tool Suit', level: 85, color: 'from-purple-500 to-pink-600' },
+        // { name: 'Ecllipse', level: 85, color: 'from-purple-500 to-pink-600' },
+        { name: 'Hibernate', level: 90, color: 'from-indigo-500 to-purple-600' }
       ],
       bgColor: darkMode ? 'bg-gradient-to-br from-gray-700 to-gray-600' : 'bg-gradient-to-br from-purple-50 to-pink-50',
       iconColor: 'text-purple-600'

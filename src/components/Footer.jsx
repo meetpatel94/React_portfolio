@@ -112,9 +112,7 @@ const Footer = ({ darkMode }) => {
         <div className={`border-t ${darkMode ? 'border-gray-700' : 'border-gray-600'} pt-6`}>
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2 text-gray-400 text-sm">
-              <span>Made with</span>
-              <Heart className="text-red-500 animate-pulse" size={14} />
-              <span>by Meet Patel</span>
+              <span>Made by Meet Patel</span>
             </div>
             <div className="text-gray-400 text-sm">
               © 2025 Meet Patel. All rights reserved.

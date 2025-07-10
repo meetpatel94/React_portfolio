@@ -20,7 +20,7 @@ const Hero = ({ darkMode }) => {
   const downloadResume = () => {
     // Create a temporary link element to trigger download
     const link = document.createElement('a');
-    link.href = '/resume.pdf'; // You'll need to add your resume file to the public folder
+    link.href = 'uploads/meetpatel_resume_1.pdf'; // You'll need to add your resume file to the public folder
     link.download = 'Meet_Patel_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -57,7 +57,7 @@ const Hero = ({ darkMode }) => {
           } transition-all duration-1000 delay-200 transform ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
-            Information Technology Engineer & Full Stack Developer
+            Information Technology Engineer & <br /> Full Stack Developer/MERN Stack Developer
           </p>
           
           <p className={`text-lg mb-12 max-w-2xl mx-auto ${
