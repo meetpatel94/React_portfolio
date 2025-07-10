@@ -6,6 +6,7 @@ import Services from '../components/Services';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 
 const Index = () => {
@@ -125,15 +126,8 @@ const Index = () => {
         <Contact darkMode={darkMode} />
       </main>
 
-      {/* Footer */}
-      <footer className={`py-8 ${
-        darkMode ? 'bg-gray-900 text-gray-300' : 'bg-white text-gray-600'
-      } border-t ${darkMode ? 'border-gray-800' : 'border-gray-200'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p>&copy; 2025 Meet Patel. All rights reserved.</p>
-          {/* <p className="text-sm mt-2">Built with React & Tailwind CSS</p> */}
-        </div>
-      </footer>
+      {/* Enhanced Footer */}
+      <Footer darkMode={darkMode} />
     </div>
   );
 };

@@ -1,6 +1,5 @@
-
 import React, { useEffect, useState, useRef } from 'react';
-import { Mail, Phone, MapPin, Send, Github, ArrowUp, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, ArrowUp, Linkedin, Instagram, MessageCircle } from 'lucide-react';
 
 const Contact = ({ darkMode }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -103,16 +102,42 @@ const Contact = ({ darkMode }) => {
   ];
 
   const socialLinks = [
-    { icon: Github, name: 'GitHub', url: 'https://github.com/meetpatel94' },
-    { icon: Linkedin, name: 'LinkedIn', url: 'https://linkedin.com/in/meet-patel-638072206' }
+    { 
+      icon: Github, 
+      name: 'GitHub', 
+      url: 'https://github.com/meetpatel94',
+      hoverColor: 'hover:bg-gray-800 hover:text-white',
+      shadowColor: 'hover:shadow-gray-500/25'
+    },
+    { 
+      icon: Linkedin, 
+      name: 'LinkedIn', 
+      url: 'https://linkedin.com/in/meet-patel-638072206',
+      hoverColor: 'hover:bg-blue-600 hover:text-white',
+      shadowColor: 'hover:shadow-blue-500/25'
+    },
+    { 
+      icon: Instagram, 
+      name: 'Instagram', 
+      url: 'https://instagram.com/meetpatel',
+      hoverColor: 'hover:bg-gradient-to-br hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 hover:text-white',
+      shadowColor: 'hover:shadow-pink-500/25'
+    },
+    { 
+      icon: MessageCircle, 
+      name: 'WhatsApp', 
+      url: 'https://wa.me/919664562657',
+      hoverColor: 'hover:bg-green-500 hover:text-white',
+      shadowColor: 'hover:shadow-green-500/25'
+    }
   ];
 
   return (
     <section ref={sectionRef} id="contact" className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`text-center mb-16 transition-all duration-1000 transform ${
+        <div className="text-center mb-16 transition-all duration-1000 transform ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-        }`}>
+        }">
           <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 ${
             darkMode ? 'text-white' : 'text-gray-800'
           }`}>
@@ -178,29 +203,33 @@ const Contact = ({ darkMode }) => {
               }`}>
                 Follow Me
               </h4>
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap gap-4">
                 {socialLinks.map((social, index) => (
                   <a
                     key={social.name}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`group relative p-3 ${
-                      darkMode ? 'bg-gray-800 hover:bg-blue-600' : 'bg-gray-100 hover:bg-blue-600'
-                    } hover:text-white rounded-lg transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:-translate-y-1 ${
+                    className={`group relative p-4 ${
+                      darkMode ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-600'
+                    } ${social.hoverColor} rounded-xl transition-all duration-500 transform hover:scale-110 ${social.shadowColor} hover:shadow-2xl hover:-translate-y-2 ${
                       isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                     }`}
                     style={{ transitionDelay: `${700 + index * 100}ms` }}
                   >
-                    <social.icon size={20} className="transition-transform duration-300" />
+                    <social.icon size={24} className="transition-all duration-500 group-hover:scale-110" />
                     
-                    {/* Tooltip */}
-                    <div className={`absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap`}>
+                    {/* Enhanced Tooltip */}
+                    <div className={`absolute -top-12 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap shadow-lg border border-gray-700`}>
+                      <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
                       {social.name}
                     </div>
                     
-                    {/* Ripple effect */}
-                    <div className="absolute inset-0 rounded-lg bg-blue-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                    {/* Ripple effect on click */}
+                    <div className="absolute inset-0 rounded-xl bg-white opacity-0 group-active:opacity-20 transition-opacity duration-150"></div>
+                    
+                    {/* Animated border glow */}
+                    <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-current opacity-30 animate-pulse"></div>
                   </a>
                 ))}
               </div>

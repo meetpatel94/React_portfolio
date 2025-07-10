@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { ArrowDown, ArrowRight } from 'lucide-react';
+import { ArrowDown, ArrowRight, Download } from 'lucide-react';
 
 const Hero = ({ darkMode }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -9,12 +9,22 @@ const Hero = ({ darkMode }) => {
     setIsVisible(true);
   }, []);
 
+  const scrollToProjects = () => {
+    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+  };
+
   const scrollToAbout = () => {
     document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToProjects = () => {
-    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+  const downloadResume = () => {
+    // Create a temporary link element to trigger download
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // You'll need to add your resume file to the public folder
+    link.download = 'Meet_Patel_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -71,10 +81,11 @@ const Hero = ({ darkMode }) => {
             </button>
             
             <button
-              onClick={scrollToAbout}
-              className="group border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+              onClick={downloadResume}
+              className="group border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center space-x-2"
             >
-              Learn More
+              <Download className="group-hover:scale-110 transition-transform duration-300" size={20} />
+              <span>Download Resume</span>
             </button>
           </div>
         </div>

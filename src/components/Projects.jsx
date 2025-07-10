@@ -13,7 +13,7 @@ const Projects = ({ darkMode }) => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 } // Reduced threshold for better mobile visibility
     );
 
     if (sectionRef.current) {
@@ -72,7 +72,7 @@ const Projects = ({ darkMode }) => {
   ];
 
   return (
-    <section ref={sectionRef} id="projects" className={`py-12 sm:py-16 lg:py-20 ${
+    <section ref={sectionRef} id="projects" className={`py-12 sm:py-16 lg:py-20 block ${
       darkMode ? 'bg-gray-800' : 'bg-gray-50'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -177,16 +177,6 @@ const Projects = ({ darkMode }) => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* View More Button */}
-        <div className={`text-center mt-12 transition-all duration-1000 delay-600 transform ${
-          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-        }`}>
-          {/* <button className="group bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center space-x-2 mx-auto">
-            <span>View All Projects</span>
-            <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" size={20} />
-          </button> */}
         </div>
       </div>
     </section>
